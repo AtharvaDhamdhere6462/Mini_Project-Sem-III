@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard - Practice</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="inner">
+        <a class="logo" href="index.html" aria-label="Dashboard Home">
+          <img src="mn.png" alt="Logo" />
+          <span>Dashboard</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link active" href="practice.html">Practice</a>
+          <a class="nav-link" href="#">Chatbot</a>
+          <a class="nav-link" href="#">Profit</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="panel">
+        <h1 class="page-title">Practice</h1>
+        <p class="subtitle">Upload your file or generate a sample test.</p>
+
+        <div class="upload">
+          <div class="upload-card">
+            <div class="input-row">
+              <label for="file" class="label-muted">Upload file:</label>
+              <input id="file" type="file" />
+              <button class="btn btn-outline" id="uploadBtn" type="button">Upload</button>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="btn btn-primary" type="button" id="createSample">Create Sample Test</button>
+          </div>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid var(--border); margin: 1.25rem 0;" />
+
+        <div class="actions">
+          <a href="#" class="btn btn-primary">View Score</a>
+          <a href="#" class="btn">Improvement</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>© <span id="year"></span> Dashboard</small>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      document.getElementById('uploadBtn').addEventListener('click', function () {
+        const input = document.getElementById('file');
+        if (!input.files || input.files.length === 0) {
+          alert('Please choose a file to upload.');
+          return;
+        }
+        alert('File selected: ' + input.files[0].name);
+      });
+
+      document.getElementById('createSample').addEventListener('click', function () {
+        alert('Sample test created! (placeholder)');
+      });
+    </script>
+  </body>
+</html>

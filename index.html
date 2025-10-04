@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard - Home</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="inner">
+        <a class="logo" href="index.html" aria-label="Dashboard Home">
+          <img src="mn.png" alt="Logo" />
+          <span>Dashboard</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a class="nav-link active" href="index.html">Home</a>
+          <a class="nav-link" href="practice.html">Practice</a>
+          <a class="nav-link" href="#">Chatbot</a>
+          <a class="nav-link" href="#">Profit</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1 class="page-title">Welcome</h1>
+        <p class="subtitle">Choose an option to continue.</p>
+        <div class="actions">
+          <a href="#" class="btn btn-primary">View Score</a>
+          <a href="#" class="btn">Improvement</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>© <span id="year"></span> Dashboard</small>
+    </footer>
+
+    <script>
+      // Keep the year current without additional tooling
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
